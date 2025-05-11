@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェーズ2 OKR - スライド7</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f0f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #ffffff 0%, #e6f0fa 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-header {
+            height: 20px;
+            background: linear-gradient(90deg, #a0c6e8 0%, #7ba9db 100%);
+        }
+        .slide-content {
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 80px);
+        }
+        .slide-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2a5b8c;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .slide-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(180deg, #a0c6e8 0%, #5588b5 100%);
+            border-radius: 4px;
+        }
+        .objective-box {
+            background-color: #e6f0fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #5588b5;
+        }
+        .objective-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .objective-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: #5588b5;
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .objective-icon i {
+            font-size: 24px;
+        }
+        .objective-text {
+            color: #2a5b8c;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .objective-desc {
+            color: #4a6786;
+            font-size: 16px;
+            line-height: 1.5;
+            padding-left: 63px;
+        }
+        .kr-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            flex-grow: 1;
+        }
+        .kr-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 3px solid #f39c12;
+            position: relative;
+        }
+        .kr-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .kr-number {
+            position: absolute;
+            top: -15px;
+            right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #f39c12;
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .kr-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(243, 156, 18, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+        .kr-icon i {
+            color: #f39c12;
+            font-size: 28px;
+        }
+        .kr-title {
+            text-align: center;
+            color: #2a5b8c;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .kr-metrics {
+            text-align: center;
+            color: #4a6786;
+            font-size: 14px;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .kr-highlight {
+            color: #f39c12;
+            font-weight: 600;
+            display: inline-block;
+            padding: 2px 5px;
+            background-color: rgba(243, 156, 18, 0.1);
+            border-radius: 4px;
+        }
+        .slide-footer {
+            height: 60px;
+            padding: 0 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .page-number {
+            font-size: 16px;
+            color: #5588b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div style="width:100%;display:flex;justify-content:space-between;margin-bottom:24px;position:relative;z-index:9999;">
+            <a href="11.html" style="background:#0c4a6e;color:#fff;padding:8px 24px;border-radius:6px;text-decoration:none;">前へ</a>
+            <a href="13.html" style="background:#0c4a6e;color:#fff;padding:8px 24px;border-radius:6px;text-decoration:none;">次へ</a>
+        </div>
+        <div class="slide-header"></div>
+        <div class="slide-content">
+            <h1 class="slide-title">フェーズ2（2025年8月〜10月）OKR 設定</h1>
+            
+            <div class="objective-box">
+                <div class="objective-title">
+                    <div class="objective-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h2 class="objective-text">Objective: ユーザー獲得を加速しつつ、サービス拡充の実験に成功する</h2>
+                </div>
+                <p class="objective-desc">
+                    積極的なマーケティングで売上を大きく伸ばし、並行して新サービスの試験導入により将来の成長エンジンを創る
+                </p>
+            </div>
+            
+            <div class="kr-grid">
+                <div class="kr-item">
+                    <span class="kr-number">1</span>
+                    <div class="kr-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="kr-title">売上と成長率の向上</h3>
+                    <div class="kr-metrics">
+                        <p><span class="kr-highlight">月次売上を10月に3,200万円達成</span></p>
+                        <p>7月から10月までの売上成長率が累計+45%以上</p>
+                        <p>平均月次成長率約13%</p>
+                        <p>8月・9月は月次成長率15%以上を記録</p>
+                    </div>
+                </div>
+                
+                <div class="kr-item">
+                    <span class="kr-number">2</span>
+                    <div class="kr-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 class="kr-title">新規患者獲得数の増加</h3>
+                    <div class="kr-metrics">
+                        <p>月間新規患者数が<span class="kr-highlight">6月比で倍増以上</span></p>
+                        <p>1人当たり顧客獲得単価（CAC）目標値以下</p>
+                        <p>広告費売上比は最大15%に制限</p>
+                        <p>広告ROI（売上ベース）6〜7倍を維持</p>
+                    </div>
+                </div>
+                
+                <div class="kr-item">
+                    <span class="kr-number">3</span>
+                    <div class="kr-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="kr-title">医師増員と稼働</h3>
+                    <div class="kr-metrics">
+                        <p>9月上旬までに新規常勤医師の研修を完了</p>
+                        <p><span class="kr-highlight">9月中旬から独り立ち診療を開始</span></p>
+                        <p>新医師が全新患の50%以上を対応</p>
+                        <p>既存非常勤医師の負担増なしに患者増に対応</p>
+                    </div>
+                </div>
+                
+                <div class="kr-item">
+                    <span class="kr-number">4</span>
+                    <div class="kr-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="kr-title">サービス品質維持</h3>
+                    <div class="kr-metrics">
+                        <p>急増する患者への対応でも<span class="kr-highlight">リピート率80%以上</span>を維持</p>
+                        <p>平均待ち日数は2日以内</p>
+                        <p>問い合わせへの初期応答時間24時間以内</p>
+                        <p>品質維持とキャパシティ拡大の両立</p>
+                    </div>
+                </div>
+                
+                <div class="kr-item" style="grid-column: span 2;">
+                    <span class="kr-number">5</span>
+                    <div class="kr-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="kr-title">新規事業パイロットの成功</h3>
+                    <div class="kr-metrics">
+                        <p>10月末までに、<span class="kr-highlight">自社サプリ試験販売で累計100万円の売上</span>を達成</p>
+                        <p>カスタマーレビュー平均4.0以上を獲得</p>
+                        <p>フランチャイズ加盟候補1件と基本合意締結</p>
+                        <p>薬局免許申請を完了し、11月からの処方薬自社提供に目処をつける</p>
+                        <p>これらにより、新規事業の事業化判断材料を確保</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="page-number">7 / 9</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') {
+            window.location.href = '11.html';
+          } else if (e.key === 'ArrowRight') {
+            window.location.href = '13.html';
+          }
+        });
+        </script>
+</body>
+</html>
