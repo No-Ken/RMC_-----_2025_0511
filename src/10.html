@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェーズ3 アクションプラン - スライド5</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f0f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #ffffff 0%, #e6f0fa 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-header {
+            height: 20px;
+            background: linear-gradient(90deg, #a0c6e8 0%, #7ba9db 100%);
+        }
+        .slide-content {
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 80px);
+        }
+        .slide-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2a5b8c;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .slide-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(180deg, #a0c6e8 0%, #5588b5 100%);
+            border-radius: 4px;
+        }
+        .phase-description {
+            color: #4a6786;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            padding-left: 20px;
+        }
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            flex-grow: 1;
+        }
+        .action-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            border-left: 4px solid;
+            transition: transform 0.3s ease;
+            height: calc(100% - 20px);
+        }
+        .action-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .priority-high {
+            border-left-color: #e74c3c;
+        }
+        .priority-medium {
+            border-left-color: #f39c12;
+        }
+        .priority-low {
+            border-left-color: #2ecc71;
+        }
+        .action-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .action-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2a5b8c;
+            flex-grow: 1;
+        }
+        .priority-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+        }
+        .badge-high {
+            background-color: #e74c3c;
+        }
+        .badge-medium {
+            background-color: #f39c12;
+        }
+        .badge-low {
+            background-color: #2ecc71;
+        }
+        .action-content {
+            color: #4a6786;
+            font-size: 15px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .action-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(160, 198, 232, 0.2);
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        .action-icon i {
+            color: #5588b5;
+            font-size: 20px;
+        }
+        .slide-footer {
+            height: 60px;
+            padding: 0 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .page-number {
+            font-size: 16px;
+            color: #5588b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div style="width:100%;display:flex;justify-content:space-between;margin-bottom:24px;position:relative;z-index:9999;">
+            <a href="9.html" style="background:#0c4a6e;color:#fff;padding:8px 24px;border-radius:6px;text-decoration:none;">前へ</a>
+            <a href="11.html" style="background:#0c4a6e;color:#fff;padding:8px 24px;border-radius:6px;text-decoration:none;">次へ</a>
+        </div>
+        <div class="slide-header"></div>
+        <div class="slide-content">
+            <h1 class="slide-title">フェーズ3（2025年11月〜2026年7月）: 事業拡大と安定成長期間</h1>
+            <p class="phase-description">新規事業の本格展開と持続可能な成長基盤の確立を行う期間</p>
+            
+            <div class="action-grid">
+                <div class="action-item priority-high">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="action-title">新規事業のローンチと拡大</h3>
+                        <span class="priority-badge badge-high">優先度：高</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 自社OEM美容サプリ・コスメの11月正式発売開始</p>
+                        <p>• オンライン薬局サービスの開始による処方薬売上の院内収益化</p>
+                        <p>• フランチャイズ第1号クリニック開業（11〜12月）と追加加盟募集</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-medium">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="action-title">マーケティング戦略の転換</h3>
+                        <span class="priority-badge badge-medium">優先度：中</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 広告投資の売上比10%以下への最適化（認知度向上に伴う効率改善）</p>
+                        <p>• メディカルダイエット以外の商材も含めた総合的なマーケティング展開</p>
+                        <p>• コミュニティ戦略によるロイヤルティ向上と広告依存度の低減</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-medium">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="action-title">オペレーション最適化とコスト管理</h3>
+                        <span class="priority-badge badge-medium">優先度：中</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 薬剤仕入れ条件の再交渉による原価率引き下げ</p>
+                        <p>• 高利益率の自社商品の売上構成比向上による全体粗利率改善</p>
+                        <p>• 診療〜配送プロセスの効率化と人件費当たり売上の向上</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-low">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3 class="action-title">組織体制の整備</h3>
+                        <span class="priority-badge badge-low">優先度：低</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 事業マネージャー職の設置と中間管理層の強化（2026年前半）</p>
+                        <p>• カスタマーサポート体制の拡充と専任スタッフの配置</p>
+                        <p>• 実績を踏まえた中長期ビジョン再策定と新たなOKRの設定</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="page-number">5 / 9</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') {
+            window.location.href = '9.html';
+          } else if (e.key === 'ArrowRight') {
+            window.location.href = '11.html';
+          }
+        });
+        </script>   
+</body>
+</html>

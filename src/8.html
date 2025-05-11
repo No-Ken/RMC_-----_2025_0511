@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フェーズ1 アクションプラン - スライド3</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f0f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #ffffff 0%, #e6f0fa 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-header {
+            height: 20px;
+            background: linear-gradient(90deg, #a0c6e8 0%, #7ba9db 100%);
+        }
+        .slide-content {
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 80px);
+        }
+        .slide-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2a5b8c;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .slide-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(180deg, #a0c6e8 0%, #5588b5 100%);
+            border-radius: 4px;
+        }
+        .phase-description {
+            color: #4a6786;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            padding-left: 20px;
+        }
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            flex-grow: 1;
+        }
+        .action-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            border-left: 4px solid;
+            transition: transform 0.3s ease;
+            height: calc(100% - 20px);
+        }
+        .action-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .priority-high {
+            border-left-color: #e74c3c;
+        }
+        .priority-medium {
+            border-left-color: #f39c12;
+        }
+        .priority-low {
+            border-left-color: #2ecc71;
+        }
+        .action-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .action-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2a5b8c;
+            flex-grow: 1;
+        }
+        .priority-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+        }
+        .badge-high {
+            background-color: #e74c3c;
+        }
+        .badge-medium {
+            background-color: #f39c12;
+        }
+        .badge-low {
+            background-color: #2ecc71;
+        }
+        .action-content {
+            color: #4a6786;
+            font-size: 15px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .action-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(160, 198, 232, 0.2);
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        .action-icon i {
+            color: #5588b5;
+            font-size: 20px;
+        }
+        .slide-footer {
+            height: 60px;
+            padding: 0 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .page-number {
+            font-size: 16px;
+            color: #5588b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div style="width:100%;display:flex;justify-content:space-between;margin-bottom:24px;position:relative;z-index:9999;">
+            <a href="7.html" style="background:#0c4a6e;color:#fff;padding:8px 24px;border-radius:6px;text-decoration:none;">前へ</a>
+            <a href="9.html" style="background:#0c4a6e;color:#fff;padding:8px 24px;border-radius:6px;text-decoration:none;">次へ</a>
+        </div>
+        <div class="slide-header"></div>
+        <div class="slide-content">
+            <h1 class="slide-title">フェーズ1（2025年5月〜7月）: 基盤構築と準備期間</h1>
+            <p class="phase-description">診療体制の整備と広告開始の準備を進め、成長フェーズへの土台を築く期間</p>
+            
+            <div class="action-grid">
+                <div class="action-item priority-high">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="action-title">医療体制の強化・準備</h3>
+                        <span class="priority-badge badge-high">優先度：高</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 新規医師の採用計画策定と候補リストアップ（7月オファー、9月採用）</p>
+                        <p>• 現行医師の診療時間拡大や予約調整による7月の患者流入対応</p>
+                        <p>• キャパシティ限界（6月以降）に備えた診療体制の見直し</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-high">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <h3 class="action-title">マーケティング開始の準備</h3>
+                        <span class="priority-badge badge-high">優先度：高</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 広告表現の医療ガイドライン準拠チェック</p>
+                        <p>• Googleヘルスケア認証取得（6月末までに完了）</p>
+                        <p>• 広告クリエイティブ・LP制作および効果測定ツール整備</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-medium">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="action-title">サービス品質と口コミ醸成</h3>
+                        <span class="priority-badge badge-medium">優先度：中</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 問診およびフォローアップ体制の見直しと強化</p>
+                        <p>• レビュー・口コミ投稿の促進（★4.5以上の評価維持）</p>
+                        <p>• 必要に応じた新規患者へのウェイティングリスト導入</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-medium">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3 class="action-title">新規事業（垂直展開）戦略の策定</h3>
+                        <span class="priority-badge badge-medium">優先度：中</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• 化粧品・サプリメントのOEM開発計画作成</p>
+                        <p>• フランチャイズ展開の事業モデルと収支シミュレーション</p>
+                        <p>• オンライン薬局設立に向けた免許・システム要件の調査</p>
+                    </div>
+                </div>
+                
+                <div class="action-item priority-low" style="grid-column: span 2;">
+                    <div class="action-header">
+                        <div class="action-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="action-title">リスク対策と情報収集</h3>
+                        <span class="priority-badge badge-low">優先度：低</span>
+                    </div>
+                    <div class="action-content">
+                        <p>• GLP-1処方に関する規制動向や業界の声の継続的モニタリング</p>
+                        <p>• 日本医師会等からの指摘を踏まえた適正な診療ガイドライン徹底</p>
+                        <p>• 将来的な薬剤供給制限などのリスクに備えた代替治療オプションの検討</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="page-number">3 / 9</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') {
+            window.location.href = '7.html';
+          } else if (e.key === 'ArrowRight') {
+            window.location.href = '9.html';
+          }
+        });
+        </script>
+</body>
+</html>
